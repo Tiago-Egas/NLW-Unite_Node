@@ -1,0 +1,22 @@
+{
+  "name": "nlw-unite_node",
+  "version": "1.0.0",
+  "description": "O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.4",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}
