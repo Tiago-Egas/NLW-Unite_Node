@@ -24,13 +24,14 @@ app.post('/events', async (request, reply) => {
     console.log('✅ - New event received.')
 
     const data = createEventSchema.parse(request.body)
+    const eventSlug = data.title.toString().toLowerCase().trimStart().trimEnd().replace(/\s+/g, '-');
 
     const event = await prisma.events.create({
         data: {
             title: data.title,
             details: data.details,
             maximumAttendees: data.maximumAttendees,
-            slug: data.title.toString().toLowerCase().trimStart().trimEnd().replace(/\s+/g, '-')
+            slug: eventSlug
         }
     })
 
